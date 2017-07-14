@@ -1,9 +1,8 @@
-<h1>Add a product.</h1>
-
-  <%= form_for @product do |f| %>
-    Name: <%= f.text_field :name %>
-    Description: <%= f.text_field :description %>
-    Price: <%= f.number_field :price, min: 0, step: 0.01 %>
-  <%= f.submit "Submit" %>
-
+<h1>Add a product</h1>
+<%= render "layouts/errors", object: @product %>
+<%= form_for @product do |f| %>
+  Name: <%= f.text_field :name, required: true %>
+  Description: <%= f.text_field :description, required: true %>
+  Price: <%= f.number_field :price, min: 0.01, step: 0.01, required: true %>
+  <%= f.submit "Submit", class: "waves-effect waves-light btn" %>
 <% end %>

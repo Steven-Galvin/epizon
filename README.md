@@ -104,6 +104,13 @@ This section is for listing the revisions I've made to the previous site. Any re
 * add AJAX to deleting cart item and adjusting total price
 *
 
+#### Functionality Changes
+* prevent users from adding negative order items to cart
+* prevent users from sending empty string to cart
+* allow only admin to add products
+* redirect users to sign in page if trying to reach unauthorized pages
+* allow admin to increase price of items by steps of 0.01
+
 ## Authors
 
 Steven Galvin
