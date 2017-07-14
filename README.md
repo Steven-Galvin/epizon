@@ -88,6 +88,12 @@ As of writing this README, these instructions work on MacOS.
 
 This section is for listing the revisions I've made to the previous site. Any refactoring, additional features, or debugging will be recorded here along with my commit history.
 
+### Style Changes
+* choose color pallet to build off of instead of materialize defaults
+* add website title to navbar with link to root
+* add collapsable menu that opens side nav when clicked
+* add welcome message calling user by name for personalable touch
+
 ## Authors
 
 Steven Galvin

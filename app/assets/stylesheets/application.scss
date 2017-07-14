@@ -24,6 +24,36 @@ $nav-user: #c77575;
 
 $side-nav-bg: #84889c;
 
+$btn-bg: #13829f;
+$btn-bg-hvr: #139f76;
+$btn-text: #e7f2f5;
+
+$dlt-btn-bg: #b95353;
+$dlt-btn-bg-hvr: #b95386;
+
+
+.btn {
+  background-color: $btn-bg;
+  color: $btn-text;
+  a {
+    color: $btn-text;
+  }
+  &hover {
+    background-color: $btn-bg-hvr;
+  }
+}
+
+.btn-delete {
+  background-color: $dlt-btn-bg;
+  height: 24px;
+  line-height: 24px;
+  font-size: 10px;
+  padding: 0 0.5rem;
+  &:hover {
+    background-color: $dlt-btn-bg-hvr;
+  }
+}
+
 body {
   background-color: $body-bg;
 }
