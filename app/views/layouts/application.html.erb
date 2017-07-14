@@ -14,11 +14,8 @@
         <%= link_to "Epizon", root_path, class: "brand-logo center" %>
         <a href="#" data-activates="mobile-demo" class="right button-collapse"><i class="material-icons">menu</i></a>
         <ul class="left">
-          <% if current_user %>
-            <li>Hello <span id="nav-user"><%= current_user.name %></span>!</li>
-          <% end %>
             <li><%= flash[:alert] %></li>
-            <li><%= flash[:notice] %></li>
+            <li><%= flash[:notice].html_safe unless flash[:notice].blank? %></li>
         </ul>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><span id="cart-quantity"><%= link_to "Cart (#{ cart_items })", cart_path %></span></li>
@@ -34,9 +31,6 @@
     </nav>
   </div>
   <ul class="side-nav" id="mobile-demo">
-    <% if current_user %>
-      <li><%= current_user.name %> | <%= current_user.email %></li>
-    <% end %>
     <li><%= link_to "Cart | Total items: #{ cart_items }", cart_path %></li>
     <li><%= link_to "See all products", products_path %></li>
     <% if current_user %>

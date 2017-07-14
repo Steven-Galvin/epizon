@@ -3,5 +3,5 @@
 <%= form_tag '/sign_in' do %>
   Email: <%= text_field_tag :email %>
   Password: <%= password_field_tag :password %>
-  <span class="waves-effect waves-light btn"><%= submit_tag "Sign in" %></span>
+  <%= submit_tag "Sign in", class: "waves-effect waves-light btn" %>
 <% end %>

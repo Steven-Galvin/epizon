@@ -94,13 +94,15 @@ This section is for listing the revisions I've made to the previous site. Any re
 * add collapsable menu that opens side nav when clicked
 * add welcome message calling user by name for personalable touch
 * edit button colors
-* make finalize order and item delete buttons
+* make 'finalize order' and item delete buttons
 * add flex to products page to organize products cleanly
 * add borders and box shadow with default height to products for uniformity
 
 #### AJAX
 
 * add AJAX to updating cart with items so it reflects in the navbar
+* add AJAX to deleting cart item and adjusting total price
+*
 
 ## Authors
 
