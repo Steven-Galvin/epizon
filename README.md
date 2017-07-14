@@ -93,6 +93,8 @@ This section is for listing the revisions I've made to the previous site. Any re
 * add website title to navbar with link to root
 * add collapsable menu that opens side nav when clicked
 * add welcome message calling user by name for personalable touch
+* edit button colors
+* make finalize order and item delete buttons
 
 ## Authors
 
