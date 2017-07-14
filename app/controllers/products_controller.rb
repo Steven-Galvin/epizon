@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
-  before_filter :authorize, except: [:index, :show]
+  before_action except: [:index, :show] do
+    flash[:alert] = "Unauthorized user" unless admin
+    authorize unless admin
+  end
 
   def index
     @products = Product.all

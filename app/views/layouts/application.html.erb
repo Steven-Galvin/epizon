@@ -20,6 +20,9 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><span id="cart-quantity"><%= link_to "Cart (#{ cart_items })", cart_path %></span></li>
           <li><%= link_to "See all products", products_path %></li>
+          <% if admin %>
+            <li><%= link_to "Add products", new_product_path %></li>
+          <% end %>
           <% if current_user %>
             <li><%= link_to "Sign out", '/sign_out' %></li>
           <% else %>
@@ -31,7 +34,7 @@
     </nav>
   </div>
   <ul class="side-nav" id="mobile-demo">
-    <li><%= link_to "Cart | Total items: #{ cart_items }", cart_path %></li>
+    <li><span id="cart-quantity"><%= link_to "Cart (#{ cart_items })", cart_path %></span></li>
     <li><%= link_to "See all products", products_path %></li>
     <% if current_user %>
       <li><%= link_to "Sign out", '/sign_out' %></li>
