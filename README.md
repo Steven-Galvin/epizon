@@ -88,7 +88,7 @@ As of writing this README, these instructions work on MacOS.
 
 This section is for listing the revisions I've made to the previous site. Any refactoring, additional features, or debugging will be recorded here along with my commit history.
 
-### Style Changes
+#### Style Changes
 * choose color pallet to build off of instead of materialize defaults
 * add website title to navbar with link to root
 * add collapsable menu that opens side nav when clicked
@@ -98,6 +98,9 @@ This section is for listing the revisions I've made to the previous site. Any re
 * add flex to products page to organize products cleanly
 * add borders and box shadow with default height to products for uniformity
 
+#### AJAX
+
+* add AJAX to updating cart with items so it reflects in the navbar
 
 ## Authors
 

@@ -83,6 +83,9 @@ nav {
   justify-content: center;
   align-items: center;
   .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 300px;
     overflow: scroll;
     border: 1px solid $main-color;
