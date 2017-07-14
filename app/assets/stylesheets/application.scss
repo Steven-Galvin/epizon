@@ -15,3 +15,32 @@
  */
 
 @import "materialize";
+
+$body-bg: #f6f6f6;
+
+$nav-bg: #333a5b;
+$nav-text: #e7f2f5;
+$nav-user: #c77575;
+
+$side-nav-bg: #84889c;
+
+body {
+  background-color: $body-bg;
+}
+
+nav {
+  color: $nav-text;
+  background-color: $nav-bg;
+  #nav-user {
+    color: $nav-user;
+  }
+  .nav-wrapper{
+    a {
+      color: $nav-text;
+    }
+  }
+}
+
+.side-nav {
+  background-color: $side-nav-bg;
+}
