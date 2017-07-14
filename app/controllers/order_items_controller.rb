@@ -7,7 +7,6 @@ class OrderItemsController < ApplicationController
     session[:order_id] = @order.id
     flash[:notice] = "Item added to cart"
     respond_to do |format|
-      format.html { redirect_to products_path }
       format.js { redirect_to products_path }
     end
   end
@@ -25,6 +24,9 @@ class OrderItemsController < ApplicationController
     @item.destroy
     @order.save
     redirect_to cart_path
+    respond_to do |format|
+      format.js
+    end
   end
 
   private

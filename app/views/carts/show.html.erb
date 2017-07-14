@@ -1,15 +1,20 @@
 <h1>Shopping Cart</h1>
 
-<% if @order_items.any? %>
-  <% @order_items.each do |item| %>
-    <p><%= item.product.name %> | <span class="waves-effect waves-light btn btn-delete"><%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %></span></p>
-    <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
+<div class="order_items">
+  <% if @order_items.any? %>
+    <% @order_items.each do |item| %>
+    <div class="order_item_<%= item.id %>">
+      <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"}, class: "waves-effect waves-light btn btn-delete", remote: true %></p>
+      <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
+    </div>
+    <% end %>
+    <p>Your Total: <%= number_to_currency current_order.total_price %></p>
+    <%= link_to "Finalize order", finalize_path, class: "waves-effect waves-light btn" %>
+  <% else %>
+    <p>Your shopping cart is empty.</p>
   <% end %>
-  <p>Your Total: <%= number_to_currency current_order.total_price %></p>
-  <span class="waves-effect waves-light btn"><%= link_to "Finalize order", finalize_path %></span>
-<% else %>
-  <p>Your shopping cart is empty.</p>
-<% end %>
+</div>
+
 
 <% if @previous_orders %>
   <h3>Your order history:</h3>
