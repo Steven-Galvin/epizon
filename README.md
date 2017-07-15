@@ -6,7 +6,7 @@
 This is a website for the fictional ecommerce site, Epizon. I made this using Ruby on Rails with the help of bcrypt for user authentication and authorization. It has two user accounts, basic and admin. Admin accounts can add products, update products, and delete products, as well as delete any reviews on those products. User accounts can add their own reviews to products, edit their reviews, and delete their reviews. All users will be able to view the stores collection of products. Users can add and remove items to their cart, and finalize their order. Taking payments will be handled by the Stripe gem. Testing will be covered with SimpleCov to make sure at least 90% of my site has been succesfully tested.
 
 ## Landing Page:
-![](./app/assets/images/placeholder.png "Epizon")
+![](./app/assets/images/landing.png "Epizon")
 
 ## Planning
 
@@ -102,7 +102,7 @@ This section is for listing the revisions I've made to the previous site. Any re
 
 * add AJAX to updating cart with items so it reflects in the navbar
 * add AJAX to deleting cart item and adjusting total price
-*
+* add AJAX to show and hide product details
 
 #### Functionality Changes
 * prevent users from adding negative order items to cart
@@ -110,6 +110,7 @@ This section is for listing the revisions I've made to the previous site. Any re
 * allow only admin to add products
 * redirect users to sign in page if trying to reach unauthorized pages
 * allow admin to increase price of items by steps of 0.01
+* allow admin to update and delete products
 
 ## Authors
 
