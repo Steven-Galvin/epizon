@@ -34,7 +34,7 @@ class OrderItemsController < ApplicationController
   def item_check(item_params)
     product_id = item_params['product_id'].to_i
     quantity = item_params['quantity'].to_i
-    order = OrderItem.all
+    order = current_order.order_items
     if order.exists?(product_id: product_id)
       item = order.where(product_id: product_id)
       item.first.quantity += quantity
