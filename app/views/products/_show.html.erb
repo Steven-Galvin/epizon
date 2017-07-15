@@ -1,6 +1,11 @@
 <div id="details">
-  <%= @product.name %><br>
+  <% if admin %>
+    <div class="admin-crud">
+      <%= link_to "Edit Product", edit_product_path(@product), class: "waves-effect waves-light btn" %>
+    </div>
+  <% end %>
+  <h3><%= @product.name %></h3>
+  <small><%= number_to_currency @product.price %></small><br>
   <%= @product.description %><br>
-  <%= number_to_currency @product.price %><br>
   <%= link_to "Hide details", products_path, class: "waves-effect waves-light btn", remote: true %>
 </div>

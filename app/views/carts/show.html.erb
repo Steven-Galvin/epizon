@@ -4,7 +4,7 @@
   <% if @order_items.any? %>
     <% @order_items.each do |item| %>
     <div class="order_item_<%= item.id %>">
-      <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"}, class: "waves-effect waves-light btn btn-delete", remote: true %></p>
+      <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"}, class: "waves-effect waves-light btn btn-delete btn-small", remote: true %></p>
       <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
     </div>
     <% end %>

@@ -1,0 +1,11 @@
+<%= render "layouts/errors", object: @product %>
+<%= form_for @product do |f| %>
+  Name: <%= f.text_field :name, required: true %>
+  Description: <%= f.text_field :description, required: true %>
+  Price: <%= f.number_field :price, min: 0.01, step: 0.01, required: true %>
+  <%= f.submit class: "waves-effect waves-light btn" %>
+  <% if editing %>
+    <%= link_to "Delete", product_path(@product), :data => {:confirm => "You sure?", :method => "delete"}, class: "waves-effect waves-light btn btn-delete" %>
+  <% end %>
+  <%= link_to "Back", :back, class: "waves-effect waves-light btn" %>
+<% end %>
