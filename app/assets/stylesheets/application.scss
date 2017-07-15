@@ -19,6 +19,7 @@
 $body-bg: #f6f6f6;
 
 $main-color: #333a5b;
+$main-light-color: #e7f2f5;
 
 $nav-bg: #333a5b;
 $nav-text: #e7f2f5;
@@ -103,4 +104,12 @@ nav {
 .title {
   display: flex;
   justify-content: center;
+}
+
+.details {
+  
+}
+
+#details {
+  border: 1px solid black;
 }

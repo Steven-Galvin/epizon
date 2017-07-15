@@ -1,0 +1,6 @@
+<div id="details">
+  <%= @product.name %><br>
+  <%= @product.description %><br>
+  <%= number_to_currency @product.price %><br>
+  <%= link_to "Hide details", products_path, class: "waves-effect waves-light btn", remote: true %>
+</div>
