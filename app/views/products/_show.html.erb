@@ -6,6 +6,7 @@
   <% end %>
   <h3><%= @product.name %></h3>
   <small><%= number_to_currency @product.price %></small><br>
+  <%= image_tag(@product.image) %><br>
   <%= @product.description %><br>
   <%= link_to "Hide details", products_path, class: "waves-effect waves-light btn", remote: true %>
 </div>
