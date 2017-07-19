@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
     @order_item = current_order.order_items.new
     respond_to do |format|
       format.html { render :index }
-      format.js
+      format.js 
     end
   end
 

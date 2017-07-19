@@ -1,1 +1,2 @@
-$('body').find("#order_item_<%=@order_id%>").remove()
+$("#order_item_<%=@item.id%>").remove();
+$("#total").empty().html('<%= number_to_currency current_order.total_price %>')

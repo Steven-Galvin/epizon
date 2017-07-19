@@ -1,0 +1,5 @@
+console.log("dang");
+$('body').css('background-color', 'red')
+console.log('hey');
+// $('#cart-quantity').html(<%= link_to "Cart (#{ cart_items })", cart_path %>);
+$('#cart-quantity').empty().append("<%= j link_to "Cart (#{ cart_items })", cart_path %>")

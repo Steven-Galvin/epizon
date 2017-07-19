@@ -3,12 +3,12 @@
 <div class="order_items">
   <% if @order_items.any? %>
     <% @order_items.each do |item| %>
-    <div class="order_item_<%= item.id %>">
+    <div id="order_item_<%= item.id %>">
       <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"}, class: "waves-effect waves-light btn btn-delete btn-small", remote: true %></p>
       <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
     </div>
     <% end %>
-    <p>Your Total: <%= number_to_currency current_order.total_price %></p>
+    <p>Your Total: <span id="total"><%= number_to_currency current_order.total_price %></span></p>
     <%= link_to "Finalize order", finalize_path, class: "waves-effect waves-light btn" %>
   <% else %>
     <p>Your shopping cart is empty.</p>
